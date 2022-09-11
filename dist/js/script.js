@@ -29,3 +29,10 @@ $('#projects a').on('mouseout', function () {
     $(this).find('.description').addClass('opacity-0');
     $(this).find('.description').removeClass('description-active');
 })
+
+$('.new-tab').on('click', function(e){
+    e.preventDefault();
+
+    const url = $(this).attr('href');
+    window.open(url).focus();
+});
